@@ -188,7 +188,7 @@
          $data_wr[7:0] = !$wr_en ? >>1$data_wr:
                          !$is_brl ? $acc:
                          $pc;
-         $digit[3:0] = $acc[3:0]==4'b0110;
+         $digit[3:0] =  $acc[7:0]==8'b0111_0011;
          *uo_out[7:0] = $digit[3:0] == 4'b0000
              ? 8'b00111111 :
              $digit[3:0] == 4'b0001
